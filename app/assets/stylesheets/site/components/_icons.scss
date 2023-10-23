@@ -1,0 +1,55 @@
+@import "./site/vendor/rfs";
+@import "./site/abstracts/variables";
+@import "./site/abstracts/mixins";
+
+// .svg-icon {
+//   display: inline-flex;
+//   align-self: center;
+
+//   &--baseline {
+//     .icon {
+//       top: 0.125em;
+//       position: relative;
+//     }
+//   }
+// }
+
+.icon {
+  fill: currentColor;
+}
+
+.icon-static,
+.icon {
+  height: 1em;
+  width: 1em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-tabler {
+  path,
+  circle,
+  rect,
+  polyline,
+  line {
+    fill: none;
+    stroke: currentColor;
+
+    &.fill {
+      fill: currentColor;
+    }
+  }
+  &--fill {
+    path {
+      fill: currentColor;
+      stroke: none;
+      &.fill {
+        fill: currentColor;
+      }
+    }
+  }
+  &--full {
+    width: auto;
+    height: auto;
+  }
+}

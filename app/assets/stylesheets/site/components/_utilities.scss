@@ -1,0 +1,166 @@
+@import "./site/vendor/rfs";
+@import "./site/abstracts/variables";
+@import "./site/abstracts/mixins";
+
+// stylelint-disable indentation
+
+// Utilities
+
+$utilities: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$utilities: map-merge(
+    (   
+        "display": (
+            responsive: true,
+            print: true,
+            property: display,
+            class: d,
+            values: flex 
+        ),
+        "justify-content": (
+            responsive: true,
+            property: justify-content,
+            values: (
+                center: center,
+                between: space-between,
+                end: end,
+                )
+        ),
+        "align-items": (
+            responsive: true,
+            property: align-items,
+            values: (
+                center: center,
+                )
+        ),
+        "padding": (
+            responsive: true,
+            property: padding,
+            class: p,
+            values: (
+                2: $spacer * 2,
+                5: $spacer * 5,
+                20: $spacer * 20,
+            )
+        ),
+        "padding-x": (
+            responsive: true,
+            property: padding-right padding-left,
+            class: px,
+            values: (
+                5: $spacer * 5,
+                10: $spacer * 10,
+                20: $spacer * 20,
+            )
+        ),
+        "padding-bottom": (
+            responsive: true,
+            property: padding-bottom,
+            class: pb,
+            values: (
+                5: $spacer * 5,
+                10: $spacer * 10,
+                20: $spacer * 20,
+            )
+        ),
+        "text-align": (
+            responsive: true,
+            property: text-align,
+            class: text,
+            values: (
+                center: center,
+                start: start,
+            )
+        ),
+        "margin-x": (
+            responsive: true,
+            property: margin-right margin-left,
+            class: mx,
+            values: (
+                auto: auto
+            )
+        ),
+        "rounded": (
+            property: border-radius,
+            class: rounded,
+            values: (
+                null: $border-radius,
+                0: 0,
+                1: $border-radius-sm,
+                2: $border-radius,
+                3: $border-radius-lg,
+                circle: 50%,
+                pill: $border-radius-pill
+            )
+        ),
+        "flex-direction": (
+            responsive: true,
+            property: flex-direction,
+            class: flex,
+            values: row column row-reverse column-reverse
+        ),
+        "gap": (
+            responsive: true,
+            property: gap,
+            class: g,
+            values: (
+                0: 0,
+                5: $spacer * 5,
+                20: $spacer * 20,
+            )
+        ),
+        "gap-x": (
+            responsive: true,
+            property: gap-x,
+            class: gx,
+            values: (
+                5: $spacer * 5,
+                20: $spacer * 20,
+            )
+        ),
+        "gap-y": (
+            responsive: true,
+            property: gap-y,
+            class: gy,
+            values: (
+                5: $spacer * 5,
+                20: $spacer * 20,
+            )
+        ),
+        "background-color": (
+            property: background-color,
+            class: bg,
+            values: (
+                "primary": $primary,
+                "secondary": $secondary,
+            )
+        ),
+        "color": (
+            property: color,
+            class: text,
+            values: (
+                "white": $white,
+                "primary": $primary,
+                "secondary": $secondary,
+                "black": $gray-900,
+            )
+        ),
+        "font-size": (
+            rfs: true,
+            property: font-size,
+            class: fs,
+            values: $font-sizes
+        ),
+        "font-weight": (
+            property: font-weight,
+            class: fw,
+            values: (
+                light: $font-weight-light,
+                lighter: $font-weight-lighter,
+                normal: $font-weight-normal,
+                bold: $font-weight-bold,
+                bolder: $font-weight-bolder
+            )
+        ),
+
+), $utilities);

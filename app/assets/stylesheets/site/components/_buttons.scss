@@ -1,0 +1,70 @@
+@import "./site/vendor/rfs";
+@import "./site/abstracts/variables";
+@import "./site/abstracts/mixins";
+
+// Reset focus browser style for anchor and button
+a:focus,
+button:focus {
+  outline: none;
+}
+
+// Override browser style for button
+button {
+  border: 0;
+  padding: 0;
+  background: none;
+}
+
+.btn {
+  // color: $btn-color;
+  --btn-bg: #{$btn-bg};
+  --btn-border-color: #{$btn-bg};
+  --btn-color: #{$btn-color};
+  --btn-height: #{$field-height};
+
+  background: var(--btn-bg);
+  border: $btn-border-width $btn-border-style var(--btn-border-color);
+  color: var(--btn-color);
+  cursor: pointer;
+  display: $btn-display;
+  font-size: $btn-font-size;
+  font-weight: $btn-font-weight;
+  min-height: var(--btn-height);
+  padding: $btn-padding;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-family: inherit;
+  @include transition($btn-transition);
+
+  & > * {
+    pointer-events: none;
+  }
+
+  &:disabled {
+    background-color: $gray-200;
+    border-color: $gray-400;
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  @if $btn-style-rounded {
+    border-radius: $btn-radius;
+
+    &--edged {
+      border-radius: 0;
+    }
+  } @else {
+    &--rounded {
+      border-radius: $btn-radius;
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+  }
+}

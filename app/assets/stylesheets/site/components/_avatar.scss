@@ -1,0 +1,13 @@
+@import "./site/vendor/rfs";
+@import "./site/abstracts/variables";
+@import "./site/abstracts/mixins";
+
+.avatar {
+    display: inline-flex;
+    height: 500px;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: black;
+}

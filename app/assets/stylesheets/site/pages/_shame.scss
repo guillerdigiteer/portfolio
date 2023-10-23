@@ -1,0 +1,18 @@
+@import "./site/vendor/rfs";
+@import "./site/abstracts/variables";
+@import "./site/abstracts/mixins";
+
+
+button {
+    padding-left: 5px;
+    padding-right: 5px;
+    border: solid 1px white;
+    color: white;
+}
+
+button:hover {
+    background-color: white;
+    border: solid 1px $primary;
+    transition: .5s;
+    color: $primary;
+}

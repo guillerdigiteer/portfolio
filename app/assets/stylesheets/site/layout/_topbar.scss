@@ -1,0 +1,40 @@
+@import "./site/vendor/rfs";
+@import "./site/abstracts/variables";
+@import "./site/abstracts/mixins";
+
+
+.nav {
+    background-color: white;
+
+    &__link {
+        color: black;
+        font-size: 18px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    &__link:hover {
+        color: white;
+        background-color: $primary;
+        transition: .5s;
+    }
+    
+    &__melink {
+        color: $primary;
+        font-size: 24px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    &__melink:hover {
+        color: white;
+        background-color: $primary;
+        transition: .5s;
+    }
+}
+
+a {
+    transition: all 0.5s linear;
+}

@@ -1,0 +1,20 @@
+doctype html
+html lang="en"
+  head
+    title
+      = content_for?(:title) ? yield(:title) : "Me."
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+    meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes"
+    meta name="description" content="Put your description here."
+    =stylesheet_link_tag "site", media: "all"
+  body
+    / header
+    =render "site/partials/header"
+    
+    / main
+    main
+      =yield
+
+    /footer
+    =render "site/partials/footer"

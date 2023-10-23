@@ -1,0 +1,18 @@
+@import "./site/vendor/rfs";
+@import "./site/abstracts/variables";
+@import "./site/abstracts/mixins";
+
+.footer{
+
+    &__link {
+        color: white;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    &__link:hover {
+        background-color: white;
+        color: $primary;
+        transition: .5s;
+    }
+}
